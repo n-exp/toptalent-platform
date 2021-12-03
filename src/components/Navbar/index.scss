@@ -1,0 +1,19 @@
+.navbar-container {
+  color: #444;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+
+  .navbar {
+    .menu-button {
+      cursor: pointer;
+    }
+  }
+
+  .mobile-menu {
+    .menu-item {
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}

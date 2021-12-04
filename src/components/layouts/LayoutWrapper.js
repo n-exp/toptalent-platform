@@ -1,6 +1,6 @@
+import AuthenticatedRoutes from "../../routes/components/AuthenticatedRoutes";
 import Layout from "./Layout";
 import AppContainer from "./LayoutContainer";
-import KPIsPage from "../../pages/KPIs/KPIsPage";
 
 const LayoutWrapper = () => {
   return (
@@ -8,7 +8,7 @@ const LayoutWrapper = () => {
       <Layout />
 
       <AppContainer>
-        <KPIsPage />
+        <AuthenticatedRoutes />
       </AppContainer>
     </div>
   );

@@ -1,0 +1,34 @@
+.input-container {
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 36px;
+    margin-right: 0;
+    user-select: none;
+
+    &.checked {
+      color: #4fac8d;
+    }
+  }
+
+  label:before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: url("../../../../assets/icons/svg/RadioOutlineIcon.svg") 0 0
+      no-repeat;
+  }
+
+  input[type="radio"]:checked + label:before {
+    background: url("../../../../assets/icons/svg/RadioFilledIcon.svg") 0 0
+      no-repeat;
+  }
+}

@@ -1,7 +1,16 @@
 import Button from "../../components/common/Button/Button";
+import RadioField from "../../components/common/Inputs/Radio";
 import KPIsForm from "./components/KPIsForm/KPIsForm";
 
 import "./KPIsPage.scss";
+
+const radios = [
+  "Less then 1 month",
+  "1-4 months",
+  "5-12 months",
+  "More then 12 months",
+  "I will decide later",
+];
 
 const KPIsPage = () => {
   return (
@@ -33,6 +42,11 @@ const KPIsPage = () => {
           </Button>
         </div>
       </div>
+      <div>
+        {radios.map((radio) => (
+          <RadioField label={radio} />
+        ))}
+        </div>
     </div>
   );
 };

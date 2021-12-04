@@ -1,7 +1,8 @@
-import Button from "../../components/common/Button/Button";
-import KPIsForm from "./components/KPIsForm/KPIsForm";
+import Button from '../../components/common/Button/Button';
+import KPIsForm from './components/KPIsForm/KPIsForm';
+import Card from '../../components/common/Card/Card';
 
-import "./KPIsPage.scss";
+import './KPIsPage.scss';
 
 const KPIsPage = () => {
   return (
@@ -11,6 +12,9 @@ const KPIsPage = () => {
       </div>
 
       <KPIsForm />
+      <div className="uk-width-1-1 uk-width-1-2@s">
+        <Card />
+      </div>
 
       <hr />
 

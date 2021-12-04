@@ -17,7 +17,7 @@ const TextField = ({
 }) => {
   const handleChange = useCallback(
     (e) => {
-      onChange(e.target.value.trim());
+      onChange(e.target.value);
     },
     [onChange]
   );

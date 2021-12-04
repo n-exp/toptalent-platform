@@ -18,12 +18,20 @@
     line-height: 1.1875rem;
   }
 
-  &:hover {
-    background-color: #8692a6;
-    color: #f0f0f0;
+  @media (hover: hover) {
+    &.active {
+      &:hover {
+        background-color: #64b99d;
+      }
+    }
 
-    path {
-      stroke: #f0f0f0;
+    &:hover {
+      background-color: #8692a6;
+      color: #f0f0f0;
+
+      path {
+        stroke: #f0f0f0;
+      }
     }
   }
 }

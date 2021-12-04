@@ -13,10 +13,7 @@ const KPIsForm = () => {
   const [password, setPassword] = useState("");
   const [isPasswordShown, setIsPasswordShown] = useState(false);
 
-  const toggleIsPasswordShown = () => {
-    console.log("onToggle: ");
-    setIsPasswordShown((isShown) => !isShown);
-  };
+  const toggleIsPasswordShown = () => setIsPasswordShown((isShown) => !isShown);
 
   const inputs = [
     {

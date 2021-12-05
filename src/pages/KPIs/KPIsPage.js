@@ -1,7 +1,8 @@
-import Button from "../../components/common/Button/Button";
-import KPIsForm from "./components/KPIsForm/KPIsForm";
+import Button from '../../components/common/Button/Button';
+import Modal from '../../components/common/Modal/Modal';
+import KPIsForm from './components/KPIsForm/KPIsForm';
 
-import "./KPIsPage.scss";
+import './KPIsPage.scss';
 
 const KPIsPage = () => {
   return (
@@ -33,6 +34,7 @@ const KPIsPage = () => {
           </Button>
         </div>
       </div>
+      <Modal />
     </div>
   );
 };

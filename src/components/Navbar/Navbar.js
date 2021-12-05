@@ -9,7 +9,7 @@ const Navbar = ({ links, toggleMenu }) => (
   >
     <div className="uk-navbar-left uk-flex-nowrap uk-margin-small-right">
       <a className="uk-navbar-item uk-logo" href="/">
-        <LogoIcon fill="#4EAD8B" />
+        <LogoIcon fill="#74141D" />
       </a>
 
       <Button classes="uk-text-nowrap uk-visible@m" type="link">

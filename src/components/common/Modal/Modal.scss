@@ -1,0 +1,43 @@
+#verify-modal {
+  .modal {
+    border-radius: 0.75rem;
+    border: 1px solid #dcdcdc;
+    color: #444444;
+
+    .modal-container {
+      @media (min-width: 640px) {
+        padding: 2.1875rem 6.25rem 2.9375rem 6.25rem !important;
+
+        .modal-title {
+          line-height: 1.5rem;
+        }
+      }
+
+      .modal-title {
+        font-weight: 600;
+        font-size: 2.375rem;
+        padding-bottom: 2.1875rem;
+        letter-spacing: -0.02em;
+        line-height: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        line-height: 2.375rem;
+        font-weight: normal;
+        padding-bottom: 3.625rem;
+        letter-spacing: -0.02em;
+      }
+
+      .descriprion {
+        color: #5c5b5b;
+        padding-bottom: 1rem;
+        padding-top: 2.4375rem;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}

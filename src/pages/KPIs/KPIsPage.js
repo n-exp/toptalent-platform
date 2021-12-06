@@ -1,7 +1,10 @@
-import Button from "../../components/common/Button/Button";
-import KPIsForm from "./components/KPIsForm/KPIsForm";
+import Modal from '../../components/common/Modal/Modal';
+import KPIsForm from './components/KPIsForm/KPIsForm';
+import Divider from '../../components/common/Divider/Divider';
+import Card from '../../components/common/Card/Card';
+import Button from '../../components/common/Button/Button';
 
-import "./KPIsPage.scss";
+import './KPIsPage.scss';
 
 const KPIsPage = () => {
   return (
@@ -11,8 +14,11 @@ const KPIsPage = () => {
       </div>
 
       <KPIsForm />
+      <div className="uk-width-1-1 uk-width-1-2@s">
+        <Card />
+      </div>
 
-      <hr />
+      <Divider />
 
       <div className="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid="">
         <div className="uk-flex uk-flex-center uk-flex-right@s">
@@ -33,6 +39,7 @@ const KPIsPage = () => {
           </Button>
         </div>
       </div>
+      <Modal />
     </div>
   );
 };

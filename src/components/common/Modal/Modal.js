@@ -8,7 +8,7 @@ const Modal = () => {
     <div id="verify-modal" uk-modal="">
       <div className="modal uk-margin-auto-vertical uk-modal-dialog uk-modal-body uk-width-auto uk-width-4-5@s uk-width-2-3@m">
         <div className="modal-container">
-          <div className="modal-title uk-text-center">Verify Your Mail</div>
+          <div className="modal-title uk-text-center">Verify Your Email</div>
           <div className="subtitle uk-text-center">
             You need to verify your email to complete registration
           </div>

@@ -33,7 +33,6 @@ const KPIsPage = () => {
           </Button>
         </div>
       </div>
-      <div></div>
     </div>
   );
 };

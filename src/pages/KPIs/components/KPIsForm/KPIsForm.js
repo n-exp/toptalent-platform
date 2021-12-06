@@ -53,6 +53,11 @@ const KPIsForm = () => {
           <div className="expand-more uk-margin-bottom">See more</div>
         </div>
       ))}
+      <div>
+        <button className="uk-button " type="button" uk-toggle="target: #verify-modal">
+          Verify Modal
+        </button>
+      </div>
     </div>
   );
 };

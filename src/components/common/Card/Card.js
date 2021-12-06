@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import clsx from 'clsx';
+
 import { CardCheckIcon } from '../../../assets/icons/CardCheckIcon';
 
 import './Card.scss';
-import clsx from 'clsx';
 
 function Card() {
   const [active, setActive] = useState(false);

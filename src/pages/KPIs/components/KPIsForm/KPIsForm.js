@@ -1,51 +1,54 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import Select from "../../../../components/common/Select/Select";
-import Chip from "../../../../components/common/Chip/Chip";
-import { useKPIsData } from "../../state/hooks/useKPIsData";
-import TextField from "../../../../components/common/Inputs/TextField";
+import Chip from '../../../../components/common/Chip/Chip';
+import { useKPIsData } from '../../state/hooks/useKPIsData';
+import TextField from '../../../../components/common/Inputs/TextField';
+import NewSelect from '../../../../components/common/Inputs/Select';
+import CheckboxField from '../../../../components/common/Inputs/Checkbox';
+import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 
 const KPIsForm = () => {
-  const { kpis, selectedKPIs, kpisTags, updateSelectedKPI } = useKPIsData();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
+  const { kpis, selectedKPIs, kpisTags, checkboxes, updateSelectedKPI, toggleCheckbox } =
+    useKPIsData();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
   const [isPasswordShown, setIsPasswordShown] = useState(false);
 
   const toggleIsPasswordShown = () => setIsPasswordShown((isShown) => !isShown);
 
   const inputs = [
     {
-      id: "name",
+      id: 'name',
       value: name,
       onChange: setName,
-      label: "Full Name",
+      label: 'Full Name'
     },
     {
-      id: "email",
+      id: 'email',
       value: email,
       onChange: setEmail,
-      label: "Email",
-      placeholder: "Llalalal",
+      label: 'Email',
+      placeholder: 'Llalalal'
     },
     {
-      id: "phone",
+      id: 'phone',
       value: phone,
       onChange: setPhone,
-      label: "Phone No",
-      size: "small",
+      label: 'Phone No',
+      size: 'small'
     },
     {
-      id: "password",
+      id: 'password',
       value: password,
       onChange: setPassword,
-      label: "Password",
-      size: "small",
+      label: 'Password',
+      size: 'small',
       isToggled: isPasswordShown,
       onToggle: toggleIsPasswordShown,
-      type: isPasswordShown ? "text" : "password",
-    },
+      type: isPasswordShown ? 'text' : 'password'
+    }
   ];
 
   return (
@@ -54,9 +57,33 @@ const KPIsForm = () => {
         <TextField key={input.id} {...input} />
       ))}
 
+      <div className="uk-child-width-1-1 uk-margin" uk-grid="">
+        {checkboxes.map(({ id, label, checked }) => (
+          <div key={id}>
+            <CheckboxField id={id} label={label} checked={checked} onChange={toggleCheckbox} />
+          </div>
+        ))}
+      </div>
+
+      <div className="uk-child-width-1-1 uk-grid-small uk-margin" uk-grid="">
+        {kpis.map((selectedKPI, kpiIdx) => (
+          <div key={kpiIdx}>
+            <Accordion title={selectedKPI.label}>
+              <div className="kpi-tags uk-grid-small uk-margin" uk-grid="">
+                {kpisTags[selectedKPI.value].map((chip, chipIdx) => (
+                  <Chip key={chipIdx}>{chip}</Chip>
+                ))}
+              </div>
+
+              <div className="expand-more uk-margin-bottom">See more</div>
+            </Accordion>
+          </div>
+        ))}
+      </div>
+
       {selectedKPIs.map((selectedKPI, kpiIdx) => (
         <div className={`kpi-${kpiIdx}`} key={kpiIdx}>
-          <Select
+          <NewSelect
             options={kpis}
             value={selectedKPI}
             onChange={(value) => updateSelectedKPI(value, kpiIdx)}
@@ -71,6 +98,11 @@ const KPIsForm = () => {
           <div className="expand-more uk-margin-bottom">See more</div>
         </div>
       ))}
+      <div>
+        <button className="uk-button " type="button" uk-toggle="target: #verify-modal">
+          Verify Modal
+        </button>
+      </div>
     </div>
   );
 };

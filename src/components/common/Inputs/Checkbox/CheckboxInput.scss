@@ -1,0 +1,13 @@
+.custom-checkbox {
+  background-color: #e3e3e3 !important;
+  border-radius: 4px !important;
+  border: unset !important;
+  min-width: 25px !important;
+  min-height: 25px !important;
+  margin: unset !important;
+
+  &:checked {
+    background-color: #fff !important;
+    background-image: url('../../../../assets/icons/svg/CheckboxFilledIcon.svg') !important;
+  }
+}

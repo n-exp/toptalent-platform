@@ -1,34 +1,20 @@
-.input-container {
-  input[type="radio"] {
-    display: none;
-  }
-  label {
-    display: inline-block;
+.input-container.radio-field {
+  .radio-label {
+    background: #ffffff;
+    color: #444444;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    padding: 1.25rem 0.875rem;
+    gap: 1.3125rem;
+
     cursor: pointer;
-    position: relative;
-    padding-left: 36px;
-    margin-right: 0;
-    user-select: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background-color, border-color, color;
 
     &.checked {
       color: #4fac8d;
+      border-color: #4fac8d;
     }
-  }
-
-  label:before {
-    content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    position: absolute;
-    left: 0;
-    bottom: 1px;
-    background: url("../../../../assets/icons/svg/RadioOutlineIcon.svg") 0 0
-      no-repeat;
-  }
-
-  input[type="radio"]:checked + label:before {
-    background: url("../../../../assets/icons/svg/RadioFilledIcon.svg") 0 0
-      no-repeat;
   }
 }

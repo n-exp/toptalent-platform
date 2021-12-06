@@ -1,4 +1,4 @@
-.input-container {
+.input-container.input-text{
   .password-icon {
     pointer-events: all;
 
@@ -9,7 +9,7 @@
     }
   }
 
-  input {
+   input {
     color: #585859;
     font-weight: normal;
     font-size: 0.875rem;

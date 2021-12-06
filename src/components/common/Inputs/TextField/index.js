@@ -23,7 +23,7 @@ const TextField = ({
   );
 
   return (
-    <div className="input-container uk-margin">
+    <div className="input-container input-text uk-margin">
       {label && (
         <label htmlFor={id} className="uk-display-inline-block uk-margin-small">
           {label}

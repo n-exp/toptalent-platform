@@ -1,4 +1,4 @@
-import "./RadioInput.scss";
+import './RadioInput.scss';
 
 const RadioInput = ({ id, checked, onChange }) => {
   return (

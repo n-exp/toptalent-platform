@@ -1,9 +1,9 @@
-import { useCallback } from "react";
-import clsx from "clsx";
+import { useCallback } from 'react';
+import clsx from 'clsx';
 
-import RadioInput from "./RadioInput";
+import RadioInput from './RadioInput';
 
-import "./index.scss";
+import './index.scss';
 
 const RadioField = ({ id, label, checked, onChange }) => {
   const handleChange = useCallback(() => {
@@ -12,10 +12,7 @@ const RadioField = ({ id, label, checked, onChange }) => {
 
   return (
     <div className="input-container radio-field">
-      <label
-        htmlFor={id}
-        className={clsx("radio-label uk-flex uk-flex-middle", { checked })}
-      >
+      <label htmlFor={id} className={clsx('radio-label uk-flex uk-flex-middle', { checked })}>
         <RadioInput id={id} checked={checked} onChange={handleChange} />
 
         {label}

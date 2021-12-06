@@ -1,11 +1,20 @@
 import { useState } from 'react';
 
+import RadioField from '../../../../components/common/Inputs/Radio';
 import Chip from '../../../../components/common/Chip/Chip';
 import { useKPIsData } from '../../state/hooks/useKPIsData';
 import TextField from '../../../../components/common/Inputs/TextField';
 import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
+
+const radios = [
+  'Less then 1 month',
+  '1-4 months',
+  '5-12 months',
+  'More then 12 months',
+  'I will decide later'
+];
 
 const KPIsForm = () => {
   const { kpis, selectedKPIs, kpisTags, checkboxes, updateSelectedKPI, toggleCheckbox } =
@@ -53,6 +62,16 @@ const KPIsForm = () => {
 
   return (
     <div className="kpis-form">
+      {radios.map((radio, radioIdx) => (
+        <RadioField
+          key={radioIdx}
+          id={radioIdx}
+          label={radio}
+          checked={Math.random() > 0.5}
+          onChange={() => {}}
+        />
+      ))}
+
       {inputs.map((input) => (
         <TextField key={input.id} {...input} />
       ))}

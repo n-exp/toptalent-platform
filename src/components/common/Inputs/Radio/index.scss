@@ -1,0 +1,20 @@
+.input-container.radio-field {
+  .radio-label {
+    background: #ffffff;
+    color: #444444;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    padding: 1.25rem 0.875rem;
+    gap: 1.3125rem;
+
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transition-property: background-color, border-color, color;
+
+    &.checked {
+      color: #4fac8d;
+      border-color: #4fac8d;
+    }
+  }
+}

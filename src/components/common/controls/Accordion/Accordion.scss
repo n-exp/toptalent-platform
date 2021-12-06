@@ -1,0 +1,40 @@
+.accordion-container {
+  > .control {
+    background: #395f8c;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    padding: 0.875rem 1.5625rem;
+    transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    & .control-title {
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      color: #ffffff;
+    }
+
+    & .control-icon {
+      transition: transform 0.35s ease;
+    }
+  }
+
+  > .content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+
+  &.opened {
+    > .control {
+      margin: 1rem 0;
+
+      & .control-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    > .content {
+      max-height: 23.75rem;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-import './CheckboxInput.scss';
-
 const CheckboxInput = ({ id, checked, onChange }) => (
   <input
     id={id}

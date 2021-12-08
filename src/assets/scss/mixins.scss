@@ -1,0 +1,27 @@
+@mixin hook-form-radio() {
+  border-radius: 6px;
+  margin: unset;
+  transition: 0.2s ease-in-out;
+  transition-property: background-color, border-color;
+}
+
+// EXAMPLES
+// @mixin hook-card() {
+//   // border-radius: $global-border-radius-large;
+
+//   h2 {
+//     @extend .uk-text-bold;
+//     @extend .uk-margin-medium-bottom;
+//   }
+// }
+
+// @mixin hook-card-primary() {
+//   background: linear-gradient(-45deg, $brand-purple, $brand-purple-i);
+
+//   @extend .uk-box-shadow-large;
+// }
+
+// @mixin hook-button-primary() {
+//   background-color: #02264d;
+//   transition: 0.2s;
+// }

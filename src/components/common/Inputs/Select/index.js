@@ -1,6 +1,6 @@
-import Select from "./Select";
+import Select from './Select';
 
-import "./index.scss";
+import './index.scss';
 
 const SelectField = ({ id, label, value, onChange, options }) => {
   return (
@@ -10,12 +10,7 @@ const SelectField = ({ id, label, value, onChange, options }) => {
           {label}
         </label>
       )}
-      <Select
-        inputId={id}
-        value={value}
-        onChange={onChange}
-        options={options}
-      />
+      <Select inputId={id} value={value} onChange={onChange} options={options} />
     </div>
   );
 };

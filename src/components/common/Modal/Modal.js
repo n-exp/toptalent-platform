@@ -22,7 +22,7 @@ const Modal = () => {
           <div className="uk-width-expand uk-flex uk-flex-center">
             <Button
               classes="uk-width-1-1 uk-width-5-6@s uk-width-4-5@m uk-width-3-5@l uk-width-2-5@xl uk-text-nowrap"
-              type="secondary"
+              color="secondary"
             >
               Verify Email
             </Button>

@@ -12,7 +12,7 @@ const Navbar = ({ links, toggleMenu }) => (
         <LogoIcon fill="#74141D" />
       </a>
 
-      <Button classes="uk-text-nowrap uk-visible@m" type="link">
+      <Button classes="uk-text-nowrap uk-visible@m" variant="link">
         Apply as a talent
       </Button>
     </div>
@@ -24,7 +24,7 @@ const Navbar = ({ links, toggleMenu }) => (
           uk-grid=""
         >
           {links.map((link, linkIdx) => (
-            <Button classes="uk-text-truncate" key={linkIdx} type="link">
+            <Button classes="uk-text-truncate" key={linkIdx} variant="link">
               {link}
             </Button>
           ))}

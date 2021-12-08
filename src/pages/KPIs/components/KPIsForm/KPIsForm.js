@@ -61,18 +61,16 @@ const KPIsForm = () => {
     }
   ];
 
-  const [isRange, setIsRange] = useState(false);
-
   return (
     <div className="kpis-form">
-      <input
-        type="checkbox"
-        checked={isRange}
-        onChange={() => setIsRange((isChecked) => !isChecked)}
-      />
-
       <div className="">
-        <DatePickerField isRange={isRange} />
+        <div>Single date selector</div>
+        <DatePickerField />
+      </div>
+
+      <div className="uk-margin">
+        <div>Range dates selector</div>
+        <DatePickerField isRange={true} />
       </div>
 
       {radios.map((radio, radioIdx) => (
@@ -80,7 +78,7 @@ const KPIsForm = () => {
           key={radioIdx}
           id={radioIdx}
           label={radio}
-          checked={Math.random() > 0.5}
+          checked={radioIdx % 2}
           onChange={() => {}}
         />
       ))}

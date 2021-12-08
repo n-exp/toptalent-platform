@@ -7,6 +7,7 @@ import TextField from '../../../../components/common/Inputs/TextField';
 import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
+import DatePickerField from '../../../../components/common/Inputs/DatePicker';
 
 const radios = [
   'Less then 1 month',
@@ -60,8 +61,20 @@ const KPIsForm = () => {
     }
   ];
 
+  const [isRange, setIsRange] = useState(false);
+
   return (
     <div className="kpis-form">
+      <input
+        type="checkbox"
+        checked={isRange}
+        onChange={() => setIsRange((isChecked) => !isChecked)}
+      />
+
+      <div className="">
+        <DatePickerField isRange={isRange} />
+      </div>
+
       {radios.map((radio, radioIdx) => (
         <RadioField
           key={radioIdx}

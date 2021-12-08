@@ -1,0 +1,30 @@
+.login-link-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1400px;
+  padding-inline: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #8692a6;
+
+  @media (min-width: 640px) {
+    padding-inline: 35px;
+  }
+  @media (min-width: 960px) {
+    padding-inline: 45px;
+  }
+  @media (min-width: 1600px) {
+    padding-inline: 0;
+  }
+
+  > .link {
+    gap: 5px;
+
+    a {
+      color: #56c1a7;
+    }
+  }
+}

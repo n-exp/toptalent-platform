@@ -25,7 +25,7 @@ const KPIsPage = () => {
           <Button
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical"
             variant="outlined"
-            type="secondary"
+            color="secondary"
           >
             Back
           </Button>
@@ -33,7 +33,7 @@ const KPIsPage = () => {
         <div className="uk-flex uk-flex-center uk-flex-left@s">
           <Button
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical"
-            type="secondary"
+            color="secondary"
           >
             Next: Project Details
           </Button>

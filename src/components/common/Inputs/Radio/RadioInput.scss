@@ -1,12 +1,4 @@
 .custom-radio {
-  background-color: #fff !important;
-  min-width: 1.375rem !important;
-  min-height: 1.375rem !important;
-  margin: unset !important;
-  border: unset !important;
-  background-image: url('../../../../assets/icons/svg/RadioOutlinedIcon.svg') !important;
-
-  &:checked {
-    background-image: url('../../../../assets/icons/svg/RadioFilledIcon.svg') !important;
-  }
+  background-color: transparent !important;
+  background-image: url('../../../../assets/icons/svg/RadioOutlinedIcon.svg');
 }

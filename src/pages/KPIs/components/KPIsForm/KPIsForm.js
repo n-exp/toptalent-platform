@@ -132,6 +132,7 @@ const KPIsForm = () => {
           key={radioIdx}
           id={radioIdx}
           label={radio}
+          // checked={Math.random() > 0.5}
           checked={radioIdx % 2}
           onChange={() => {}}
         />

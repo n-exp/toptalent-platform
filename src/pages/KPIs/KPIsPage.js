@@ -1,7 +1,8 @@
-import Button from '../../components/common/Button/Button';
 import Modal from '../../components/common/Modal/Modal';
 import KPIsForm from './components/KPIsForm/KPIsForm';
 import Divider from '../../components/common/Divider/Divider';
+import Card from '../../components/common/Card/Card';
+import Button from '../../components/common/Button/Button';
 
 import './KPIsPage.scss';
 
@@ -13,6 +14,9 @@ const KPIsPage = () => {
       </div>
 
       <KPIsForm />
+      <div className="uk-width-1-1 uk-width-1-2@s">
+        <Card />
+      </div>
 
       <Button type="secondary" variant="button-large">
         Register account

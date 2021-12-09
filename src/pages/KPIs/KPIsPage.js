@@ -18,6 +18,10 @@ const KPIsPage = () => {
         <Card />
       </div>
 
+      <Button type="secondary" size="large">
+        Register account
+      </Button>
+
       <Divider />
 
       <div className="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid="">

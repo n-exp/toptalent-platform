@@ -15,7 +15,7 @@ const Button = ({
     <button
       className={clsx(`button uk-button uk-border-rounded ${variant} ${color}`, {
         'uk-button-small': size === 'small',
-        'uk-button-large': size === 'large',
+        'uk-button-large button-large': size === 'large',
         'uk-button-link': variant === 'link',
         [classes]: classes
       })}

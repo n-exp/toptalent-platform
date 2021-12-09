@@ -1,5 +1,5 @@
-import Button from '../../../components/common/Button/Button';
-import Divider from '../../../components/common/Divider/Divider';
+import Button from '../../../../components/common/Button/Button';
+import Divider from '../../../../components/common/Divider/Divider';
 
 import './FormHeader.scss';
 

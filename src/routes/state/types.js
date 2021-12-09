@@ -1,5 +1,7 @@
 const Route = {
-  KPIS: "kpis",
+  SIGNUP: 'signup',
+
+  KPIS: 'kpis',
 
   NOT_FOUND: '*'
 };

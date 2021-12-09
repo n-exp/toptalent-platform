@@ -1,8 +1,9 @@
-import { useCallback } from "react";
+import { useCallback } from 'react';
+import clsx from 'clsx';
 
-import TextInput from "./TextInput";
+import TextInput from './TextInput';
 
-import "./index.scss";
+import './index.scss';
 
 const TextField = ({
   id,
@@ -14,6 +15,7 @@ const TextField = ({
   onToggle,
   placeholder,
   size,
+  isRequired
 }) => {
   const handleChange = useCallback(
     (e) => {
@@ -27,6 +29,7 @@ const TextField = ({
       {label && (
         <label htmlFor={id} className="uk-display-inline-block uk-margin-small">
           {label}
+          <span className={clsx('uk-text-danger', { 'uk-hidden': !isRequired })}>*</span>
         </label>
       )}
       <TextInput

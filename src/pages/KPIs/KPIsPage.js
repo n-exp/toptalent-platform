@@ -14,7 +14,7 @@ const KPIsPage = () => {
 
       <KPIsForm />
 
-      <Button type="secondary" variant="button-large">
+      <Button type="secondary" size="large">
         Register account
       </Button>
 

@@ -20,6 +20,11 @@ const KPIsForm = () => {
 
   return (
     <div className="kpis-form">
+      <div className="uk-margin">
+        <div>Time Picker</div>
+        <DatePickerField selectTime />
+      </div>
+    
       <div className="">
         <div>Single date selector</div>
         <DatePickerField />

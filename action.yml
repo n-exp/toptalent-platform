@@ -1,0 +1,2 @@
+- name: Attach to Trello Card
+  uses: delivered/attach-to-trello-card-action@v2.0.0

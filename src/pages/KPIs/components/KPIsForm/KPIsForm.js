@@ -103,6 +103,11 @@ const KPIsForm = () => {
 
   return (
     <div className="kpis-form">
+      <div className="uk-margin">
+        <div>Time Picker</div>
+        <DatePickerField selectTime />
+      </div>
+
       <Authcontainer
         title="Welcome back"
         header="Login to your account"

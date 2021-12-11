@@ -5,6 +5,13 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import Tag from '../../../../components/common/Tag/Tag';
+
+const tags = [
+  { title: 'HTML', color: 'default' },
+  { title: 'JavaScripts', color: 'primary' },
+  { title: 'CSS', size: 'large', color: 'primary' }
+];
 
 const radios = [
   'Less then 1 month',
@@ -24,7 +31,7 @@ const KPIsForm = () => {
         <div>Time Picker</div>
         <DatePickerField selectTime />
       </div>
-    
+
       <div className="">
         <div>Single date selector</div>
         <DatePickerField />
@@ -34,6 +41,10 @@ const KPIsForm = () => {
         <div>Range dates selector</div>
         <DatePickerField isRange={true} />
       </div>
+
+      {tags.map((tag, tagIdx) => (
+        <Tag key={tagIdx} title={tag.title} color={tag.color} size={tag.size} />
+      ))}
 
       {radios.map((radio, radioIdx) => (
         <RadioField

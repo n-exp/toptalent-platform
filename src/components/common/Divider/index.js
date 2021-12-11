@@ -8,7 +8,7 @@ const DividerField = ({ text, type }) => {
       <div className="uk-width-expand uk-margin-auto-vertical">
         <Divider type={type} />
       </div>
-      <div className="uk-width-auto divider-text">{text}</div>
+      <div className="uk-width-auto uk-margin-auto-vertical divider-text">{text}</div>
       <div className="uk-width-expand uk-margin-auto-vertical">
         <Divider type={type} />
       </div>

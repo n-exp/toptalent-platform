@@ -1,0 +1,60 @@
+.timepicker-container {
+  padding-bottom: 1.875rem;
+
+  > .timepicker-header {
+    .header-control-icon {
+      cursor: pointer;
+      width: 1rem;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+
+    > .header-label {
+      color: #333333;
+      font-weight: bold;
+      font-size: 1.125rem;
+      line-height: 1.3125rem;
+    }
+  }
+  > .timepicker-time-box {
+    gap: 0.3125rem;
+
+    > .timepicker-time-item {
+      cursor: pointer;
+      color: #8692a6;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+      padding: 0.3125rem 0.625rem;
+
+      &.time-item-disabled {
+        color: #d2d5da;
+        cursor: default;
+
+        &:hover {
+          background-color: unset;
+        }
+      }
+
+      &.time-item-selected {
+        background-color: #395f8c;
+        color: #f2f2f2;
+
+        &:hover {
+          background-color: #3a6f8d;
+        }
+      }
+
+      &.time-item-disabled.time-item-selected {
+        background-color: #f0f0f0;
+        color: #b3b2b2;
+      }
+
+      &:hover {
+        background-color: #ebebeb;
+      }
+    }
+  }
+}

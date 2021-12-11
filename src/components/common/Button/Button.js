@@ -1,23 +1,25 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import "./Button.scss";
+import './Button.scss';
 
 const Button = ({
   children,
   classes,
   onClick,
-  variant,
-  type = "primary",
-  size,
+  variant = 'contained',
+  type,
+  color = 'primary',
+  size
 }) => {
   return (
     <button
-      className={clsx(`button uk-button uk-border-rounded ${variant} ${type}`, {
-        "uk-button-small": size === "small",
-        "uk-button-large": size === "large",
-        "uk-button-link": type === "link",
-        [classes]: classes,
+      className={clsx(`button uk-button uk-border-rounded ${variant} ${color}`, {
+        'uk-button-small': size === 'small',
+        'uk-button-large button-large': size === 'large',
+        'uk-button-link': variant === 'link',
+        [classes]: classes
       })}
+      type={type}
       onClick={onClick}
     >
       {children}

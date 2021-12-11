@@ -23,12 +23,17 @@ const KPIsPage = () => {
         <Card />
       </div>
 
+      <Button type="secondary" size="large">
+        Register account
+      </Button>
+
+      <Divider />
       <div className="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid="">
         <div className="uk-flex uk-flex-center uk-flex-right@s">
           <Button
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical"
             variant="outlined"
-            type="secondary"
+            color="secondary"
           >
             Back
           </Button>
@@ -36,7 +41,7 @@ const KPIsPage = () => {
         <div className="uk-flex uk-flex-center uk-flex-left@s">
           <Button
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical"
-            type="secondary"
+            color="secondary"
           >
             Next: Project Details
           </Button>

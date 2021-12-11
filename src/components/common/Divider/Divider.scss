@@ -1,3 +1,11 @@
-hr {
-  border-top: 1px solid #696f79 !important;
+.divider-component {
+  border-top: 1px solid;
+
+  &.divider-primary {
+    border-color: #eeeded;
+  }
+
+  &.divider-default {
+    border-color: #696f79;
+  }
 }

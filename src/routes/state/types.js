@@ -1,7 +1,9 @@
 const Route = {
-  SIGNUP: 'signup',
+  SIGNUP: '/signup',
+  LOGIN: '/login',
+  FORGOT: '/forgot',
 
-  KPIS: 'kpis',
+  KPIS: '/kpis',
 
   NOT_FOUND: '*'
 };

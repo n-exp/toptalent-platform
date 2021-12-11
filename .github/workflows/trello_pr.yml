@@ -1,0 +1,5 @@
+name: Link to Trello
+  uses: kagof/trello-link-github-action@v1.1.0
+  with:
+    board-identifier: "${{ secrets.TRELLO_PR_CLOSED_LIST_ID }}"
+    trello-token: "${{ secrets.TRELLO_TOKEN }}"

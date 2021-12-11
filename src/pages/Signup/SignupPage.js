@@ -61,7 +61,7 @@ const SignupPage = () => {
     }
   ];
 
-  const buttons = [{ id: 'submit', type: 'submit', text: 'Log in' }];
+  const buttons = [{ id: 'submit', type: 'submit', text: 'Register Account' }];
 
   const handleSubmit = useCallback(
     (e) => {

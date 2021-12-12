@@ -21,10 +21,19 @@ const KPIsForm = () => {
   return (
     <div className="kpis-form">
       <div className="uk-margin">
+        <Chip isSelected={true} title="Customer Segmentation" />
+        <Chip
+          isSelected={false}
+          title="Data Discovery
+"
+        />
+      </div>
+
+      <div className="uk-margin">
         <div>Time Picker</div>
         <DatePickerField selectTime />
       </div>
-    
+
       <div className="">
         <div>Single date selector</div>
         <DatePickerField />
@@ -60,7 +69,7 @@ const KPIsForm = () => {
             <Accordion title={selectedKPI.label}>
               <div className="kpi-tags uk-grid-small uk-margin" uk-grid="">
                 {kpisTags[selectedKPI.value].map((chip, chipIdx) => (
-                  <Chip key={chipIdx}>{chip}</Chip>
+                  <Chip key={chipIdx} title={chip} />
                 ))}
               </div>
 
@@ -80,7 +89,7 @@ const KPIsForm = () => {
 
           <div className="kpi-tags uk-grid-small uk-margin" uk-grid="">
             {kpisTags[selectedKPI.value].map((chip, chipIdx) => (
-              <Chip key={chipIdx}>{chip}</Chip>
+              <Chip key={chipIdx} title={chip} />
             ))}
           </div>
 

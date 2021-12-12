@@ -15,7 +15,8 @@ const TextField = ({
   onToggle,
   placeholder,
   size,
-  isRequired
+  isRequired,
+  icon
 }) => {
   const handleChange = useCallback(
     (e) => {
@@ -41,6 +42,7 @@ const TextField = ({
         placeholder={placeholder}
         type={type}
         size={size}
+        icon={icon}
       />
     </div>
   );

@@ -1,5 +1,10 @@
 name: Link to Trello
 on:
+  #push:
+  #  branches: [ main ]
+  #pull_request:
+  #  branches: [ main ]
+  #issues:
   pull_request:
     types: [opened, reopened, edited]
 jobs:

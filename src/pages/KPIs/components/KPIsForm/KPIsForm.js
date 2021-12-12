@@ -5,6 +5,7 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import TextareaField from '../../../../components/common/Inputs/Textarea';
 
 const radios = [
   'Less then 1 month',
@@ -24,7 +25,7 @@ const KPIsForm = () => {
         <div>Time Picker</div>
         <DatePickerField selectTime />
       </div>
-    
+
       <div className="">
         <div>Single date selector</div>
         <DatePickerField />
@@ -34,6 +35,10 @@ const KPIsForm = () => {
         <div>Range dates selector</div>
         <DatePickerField isRange={true} />
       </div>
+
+      <TextareaField label="Short Description" placeholder="Add short description" onChange={() => {}}/>
+      <TextareaField  placeholder="Add short description"onChange={() => {}}/>
+      <TextareaField label="Short Description" onChange={() => {}}/>
 
       {radios.map((radio, radioIdx) => (
         <RadioField

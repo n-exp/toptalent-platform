@@ -1,0 +1,17 @@
+.js-upload {
+  &:hover {
+    button {
+      border: 1px solid transparent;
+      background-color: #395f8c !important;
+      color: #fff !important;
+    }
+
+    path {
+      stroke: #fff !important;
+    }
+  }
+
+  ::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+}

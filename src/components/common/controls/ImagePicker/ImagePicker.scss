@@ -1,0 +1,31 @@
+.photo-wrapper {
+  &.uk-transition-toggle {
+    .uk-transition-fade {
+      &:focus-within {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .uk-transition-fade {
+        opacity: 1;
+      }
+    }
+  }
+
+  --corner-quarter: 0.146446609406726237799577;
+  --icon-offset: calc(100% * var(--corner-quarter));
+
+  .delete-image-icon-wrapper {
+    position: absolute;
+    top: var(--icon-offset);
+    right: var(--icon-offset);
+    transform: translateX(50%) translateY(-50%);
+
+    .delete-image-icon {
+      cursor: pointer;
+      background-color: #2f2f2f;
+    }
+  }
+
+}

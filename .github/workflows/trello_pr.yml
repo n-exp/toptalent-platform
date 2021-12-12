@@ -1,6 +1,5 @@
 name: Link to Trello
 on:
-  push:
   pull_request:
     types: [opened, reopened, edited]
 jobs:
@@ -12,3 +11,4 @@ jobs:
         with:
           board-identifier: "${{ secrets.BOARD_IDENTIFIER }}"
           trello-token: "${{ secrets.TRELLO_TOKEN }}"
+          marker: 'TTP-'

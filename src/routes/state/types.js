@@ -5,6 +5,8 @@ const Route = {
 
   KPIS: '/kpis',
 
+  ROOT: '/',
+
   NOT_FOUND: '*'
 };
 

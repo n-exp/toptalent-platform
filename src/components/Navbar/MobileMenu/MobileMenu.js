@@ -1,9 +1,9 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 const MobileMenu = ({ links, isMenuOpened }) => (
   <div
-    className={clsx("mobile-menu uk-animation-slide-right uk-hidden@m", {
-      "uk-hidden": !isMenuOpened,
+    className={clsx('mobile-menu uk-hidden@m', {
+      'menu-opened': isMenuOpened
     })}
   >
     <hr />

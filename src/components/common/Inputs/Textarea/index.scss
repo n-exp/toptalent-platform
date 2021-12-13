@@ -1,0 +1,28 @@
+.input-container.input-textarea {
+  > label {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #696f79;
+    padding-bottom: 1.0625rem;
+  }
+
+  textarea {
+    border-radius: 0.375rem;
+    border-color: #8692a6;
+    resize: none;
+    padding: 1rem 1.0625rem;
+    line-height: 1.0625rem;
+    font-size: 0.875rem;
+
+    &:focus {
+      border-color: #4ead8d;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: #8692a6;
+      vertical-align: text-bottom;
+    }
+  }
+}

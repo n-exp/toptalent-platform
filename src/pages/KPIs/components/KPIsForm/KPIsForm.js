@@ -5,10 +5,17 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import Tag from '../../../../components/common/Tag/Tag';
 import TextareaField from '../../../../components/common/Inputs/Textarea';
 import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
 import { PlusIcon } from '../../../../assets/icons/PlusIcon';
 import TextField from '../../../../components/common/Inputs/TextField';
+
+const tags = [
+  { title: 'HTML', color: 'default' },
+  { title: 'JavaScripts', color: 'primary' },
+  { title: 'CSS', size: 'large', color: 'primary' }
+];
 
 const radios = [
   'Less then 1 month',
@@ -47,6 +54,10 @@ const KPIsForm = () => {
         <div>Range dates selector</div>
         <DatePickerField isRange={true} />
       </div>
+
+      {tags.map((tag, tagIdx) => (
+        <Tag key={tagIdx} title={tag.title} color={tag.color} size={tag.size} />
+      ))}
 
       <TextareaField label="Short Description" placeholder="Add short description" onChange={() => {}}/>
       <TextareaField  placeholder="Add short description"onChange={() => {}}/>

@@ -5,6 +5,9 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
+import { PlusIcon } from '../../../../assets/icons/PlusIcon';
+import TextField from '../../../../components/common/Inputs/TextField';
 
 const radios = [
   'Less then 1 month',
@@ -44,12 +47,15 @@ const KPIsForm = () => {
         <DatePickerField isRange={true} />
       </div>
 
+      <TextField icon={ArrowLeftIcon} />
+      <TextField icon={PlusIcon} />
+      <TextField />
+
       {radios.map((radio, radioIdx) => (
         <RadioField
           key={radioIdx}
           id={radioIdx}
           label={radio}
-          // checked={Math.random() > 0.5}
           checked={radioIdx % 2}
           onChange={() => {}}
         />

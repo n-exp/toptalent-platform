@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Find trello link and attach to card
     steps:
-      - uses: delivered/attach-to-trello-card-action@master
+      - uses: delivered/attach-to-trello-card-action@v2.0.0
         with:
           trello-key: ${{ secrets.TRELLO_KEY }}
           trello-token: ${{ secrets.TRELLO_TOKEN }}
           add-pr-comment: true
-          repo-token: ${{ secrets.TRELLO_GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

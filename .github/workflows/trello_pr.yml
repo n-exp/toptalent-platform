@@ -1,0 +1,14 @@
+name: Link to Trello
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+jobs:
+  attach-trello-pr:
+    runs-on: ubuntu-latest
+    name: Trello PR finding
+    steps:
+      - uses: kagof/trello-link-github-action@v1.1.0
+        with:
+          board-identifier: "${{ secrets.BOARD_IDENTIFIER }}"
+          trello-token: "${{ secrets.TRELLO_TOKEN }}"
+          marker: 'TTP-'

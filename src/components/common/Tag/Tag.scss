@@ -1,0 +1,31 @@
+.tag-component {
+  border-radius: 0.375rem;
+  background-color: #ededed;
+  height: 1.875rem;
+  line-height: 2.0625rem;
+  letter-spacing: 0.016rem;
+  font-weight: normal;
+
+  .tag-title {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 0.75rem;
+  }
+
+  &.default {
+    .tag-title {
+      color: #4ead8d;
+    }
+  }
+  &.primary {
+    .tag-title {
+      color: #75141d;
+    }
+  }
+  &.large {
+    height: 3.125rem;
+    .tag-title {
+      font-size: 1rem;
+    }
+  }
+}

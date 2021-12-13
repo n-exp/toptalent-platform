@@ -1,8 +1,9 @@
 import Modal from '../../components/common/Modal/Modal';
 import KPIsForm from './components/KPIsForm/KPIsForm';
-import Divider from '../../components/common/Divider/Divider';
+import Divider from '../../components/common/Divider';
 import Card from '../../components/common/Card/Card';
 import Button from '../../components/common/Button/Button';
+import Pin from '../../components/common/Inputs/Pin/Pin';
 
 import './KPIsPage.scss';
 
@@ -14,6 +15,14 @@ const KPIsPage = () => {
       </div>
 
       <KPIsForm />
+
+      <Divider />
+      <Divider type="primary" text="Valentin" />
+      <Divider type="default" />
+      <div className="uk-width-expand uk-flex uk-flex-center">
+        <Pin />
+      </div>
+
       <div className="uk-width-1-1 uk-width-1-2@s">
         <Card />
       </div>
@@ -23,7 +32,6 @@ const KPIsPage = () => {
       </Button>
 
       <Divider />
-
       <div className="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid="">
         <div className="uk-flex uk-flex-center uk-flex-right@s">
           <Button

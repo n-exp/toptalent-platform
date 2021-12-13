@@ -1,31 +1,28 @@
-import clsx from "clsx";
-
-import EyeIcon from "../../../../assets/icons/EyeIcon";
+import clsx from 'clsx';
 
 const TextInput = ({
   id,
   value,
   name,
   placeholder,
-  type = "text",
+  type = 'text',
   size,
   onChange,
   isToggled,
-  onToggle,
+  icon: IconComponent,
+  onToggle
 }) => (
   <div className="uk-position-relative">
-    <span
-      className={clsx(
-        "uk-position-center-right uk-position-small password-icon",
-        {
-          show: isToggled,
-          "uk-hidden": !onToggle,
-        }
-      )}
-      onClick={onToggle}
-    >
-      <EyeIcon />
-    </span>
+    {IconComponent && (
+      <span
+        className={clsx('uk-position-center-right uk-position-small password-icon', {
+          show: isToggled
+        })}
+        onClick={onToggle}
+      >
+        <IconComponent fill="#B2B8C3" />
+      </span>
+    )}
     <input
       id={id}
       className={clsx(`uk-input input-${type}`, { [size]: size })}

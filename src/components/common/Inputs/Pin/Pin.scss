@@ -1,0 +1,21 @@
+.pin-field {
+  background-color: rgba(196, 196, 196, 0.3);
+  border-radius: 0.9375rem;
+  margin: 0.625rem;
+  width: 2.8875rem;
+  height: 3.0625rem;
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  color: #444444;
+  font-weight: normal;
+  outline: none !important;
+  text-align: center;
+  transition-duration: 250ms;
+  transition-property: background-color, color, border, box-shadow, transform;
+  border: unset;
+
+  @media (min-width: 640px) {
+    width: 4.125rem;
+    height: 4.375rem;
+  }
+}

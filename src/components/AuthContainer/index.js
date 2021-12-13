@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 import AuthContainerFormButtons from './components/AuthContainerFormButtons';
 import AuthContainerFormInputs from './components/AuthContainerFormInputs';
@@ -33,11 +34,12 @@ const Authcontainer = ({ title, description, header, error, form, footer, onSubm
       </div>
 
       {footer && (
-        <div className="form-footer uk-margin-large uk-padding-small uk-padding-remove-horizontal uk-grid-collapse uk-child-width-auto uk-flex uk-flex-center uk-flex-wrap">
+        <div className="form-footer uk-margin uk-padding uk-padding-remove-horizontal uk-grid-collapse uk-child-width-auto uk-flex uk-flex-center uk-flex-wrap">
           {footer.text && <span>{footer.text}</span>}
-          <a href={footer.link} className="footer-link">
+
+          <Link className="footer-link" to={footer.link}>
             {footer.linkText}
-          </a>
+          </Link>
         </div>
       )}
     </div>

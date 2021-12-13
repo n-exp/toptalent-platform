@@ -1,22 +1,20 @@
 import { useCallback } from 'react';
 import clsx from 'clsx';
 
-import TextInput from './TextInput';
+import TextareaInput from './TextareaInput';
 
 import './index.scss';
 
-const TextField = ({
+const TextareaField = ({
   id,
   label,
-  type,
   value,
   onChange,
   isToggled,
   onToggle,
   placeholder,
   size,
-  isRequired,
-  icon
+  isRequired
 }) => {
   const handleChange = useCallback(
     (e) => {
@@ -26,26 +24,24 @@ const TextField = ({
   );
 
   return (
-    <div className="input-container input-text uk-margin">
+    <div className="input-container input-textarea uk-margin">
       {label && (
-        <label htmlFor={id} className="uk-display-inline-block uk-margin-small">
-          {label}
+        <label htmlFor={id} className="uk-display-inline-block ">
           <span className={clsx('uk-text-danger', { 'uk-hidden': !isRequired })}>*</span>
+          {label}
         </label>
       )}
-      <TextInput
+      <TextareaInput
         id={id}
         value={value}
         onChange={handleChange}
         isToggled={isToggled}
         onToggle={onToggle}
         placeholder={placeholder}
-        type={type}
         size={size}
-        icon={icon}
       />
     </div>
   );
 };
 
-export default TextField;
+export default TextareaField;

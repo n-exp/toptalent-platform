@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export const useAuthData = () => {
+  const [avatar, setAvatar] = useState(null);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,6 +12,7 @@ export const useAuthData = () => {
   const toggleIsPasswordShown = () => setIsPasswordShown((isShown) => !isShown);
 
   return {
+    avatar,
     selectedProfession,
     username,
     email,
@@ -18,6 +20,7 @@ export const useAuthData = () => {
     phone,
     isPasswordShown,
 
+    setAvatar,
     setSelectedProfession,
     setUsername,
     setEmail,

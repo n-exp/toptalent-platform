@@ -5,6 +5,9 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import ButtonUploader from '../../../../components/common/controls/Uploader/ButtonUploader';
+import ImagePicker from '../../../../components/common/controls/ImagePicker/ImagePicker';
+import { useAuthData } from '../../state/hooks/useAuthData';
 import Tag from '../../../../components/common/Tag/Tag';
 import TextareaField from '../../../../components/common/Inputs/Textarea';
 import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
@@ -28,15 +31,41 @@ const radios = [
 const KPIsForm = () => {
   const { kpis, selectedKPIs, kpisTags, checkboxes, updateSelectedKPI, toggleCheckbox } =
     useKPIsData();
+  const { avatar, setAvatar } = useAuthData();
 
   return (
     <div className="kpis-form">
       <div className="uk-margin">
+        <div className="uk-grid-small" uk-grid="">
+          <div className="uk-width-1-6">
+            <ImagePicker src={avatar} onChange={setAvatar} />
+          </div>
+
+          <div className="uk-width-expand uk-margin-auto-vertical">
+            <ButtonUploader onChange={setAvatar} text={'Add Profile Photo'} />
+          </div>
+        </div>
+      </div>
+
+      <div className="uk-margin">
+        <div uk-grid="">
+          <div className="uk-width-expand">
+            <h1>JUSTIN NGUYEN</h1>
+            <p>DESIGN & FONTEND DEVELOPER</p>
+            <h4>LOCATION</h4>
+            <p>Justin is now available for hire</p>
+          </div>
+          <div className="uk-width-3-5">
+            <ImagePicker src={avatar} variant="avatar" onChange={setAvatar} />
+          </div>
+        </div>
+      </div>
+
+      <div className="uk-margin">
         <Chip isSelected={true} title="Customer Segmentation" />
         <Chip
           isSelected={false}
-          title="Data Discovery
-"
+          title="Data Discovery"
         />
       </div>
 

@@ -5,6 +5,7 @@ import NewSelect from '../../../../components/common/Inputs/Select';
 import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
+import TextareaField from '../../../../components/common/Inputs/Textarea';
 import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
 import { PlusIcon } from '../../../../assets/icons/PlusIcon';
 import TextField from '../../../../components/common/Inputs/TextField';
@@ -46,6 +47,10 @@ const KPIsForm = () => {
         <div>Range dates selector</div>
         <DatePickerField isRange={true} />
       </div>
+
+      <TextareaField label="Short Description" placeholder="Add short description" onChange={() => {}}/>
+      <TextareaField  placeholder="Add short description"onChange={() => {}}/>
+      <TextareaField label="Short Description" onChange={() => {}}/>
 
       <TextField icon={ArrowLeftIcon} />
       <TextField icon={PlusIcon} />

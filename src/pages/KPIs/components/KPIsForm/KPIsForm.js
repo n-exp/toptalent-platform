@@ -6,6 +6,9 @@ import CheckboxField from '../../../../components/common/Inputs/Checkbox';
 import Accordion from '../../../../components/common/controls/Accordion/Accordion';
 import DatePickerField from '../../../../components/common/Inputs/DatePicker';
 import TextareaField from '../../../../components/common/Inputs/Textarea';
+import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
+import { PlusIcon } from '../../../../assets/icons/PlusIcon';
+import TextField from '../../../../components/common/Inputs/TextField';
 
 const radios = [
   'Less then 1 month',
@@ -21,6 +24,15 @@ const KPIsForm = () => {
 
   return (
     <div className="kpis-form">
+      <div className="uk-margin">
+        <Chip isSelected={true} title="Customer Segmentation" />
+        <Chip
+          isSelected={false}
+          title="Data Discovery
+"
+        />
+      </div>
+
       <div className="uk-margin">
         <div>Time Picker</div>
         <DatePickerField selectTime />
@@ -40,12 +52,15 @@ const KPIsForm = () => {
       <TextareaField  placeholder="Add short description"onChange={() => {}}/>
       <TextareaField label="Short Description" onChange={() => {}}/>
 
+      <TextField icon={ArrowLeftIcon} />
+      <TextField icon={PlusIcon} />
+      <TextField />
+
       {radios.map((radio, radioIdx) => (
         <RadioField
           key={radioIdx}
           id={radioIdx}
           label={radio}
-          // checked={Math.random() > 0.5}
           checked={radioIdx % 2}
           onChange={() => {}}
         />
@@ -65,7 +80,7 @@ const KPIsForm = () => {
             <Accordion title={selectedKPI.label}>
               <div className="kpi-tags uk-grid-small uk-margin" uk-grid="">
                 {kpisTags[selectedKPI.value].map((chip, chipIdx) => (
-                  <Chip key={chipIdx}>{chip}</Chip>
+                  <Chip key={chipIdx} title={chip} />
                 ))}
               </div>
 
@@ -85,7 +100,7 @@ const KPIsForm = () => {
 
           <div className="kpi-tags uk-grid-small uk-margin" uk-grid="">
             {kpisTags[selectedKPI.value].map((chip, chipIdx) => (
-              <Chip key={chipIdx}>{chip}</Chip>
+              <Chip key={chipIdx} title={chip} />
             ))}
           </div>
 

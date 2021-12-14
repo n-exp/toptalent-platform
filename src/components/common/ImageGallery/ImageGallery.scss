@@ -1,0 +1,123 @@
+.slideshow-container {
+  border-radius: 8px;
+}
+
+.thumbnav-wrapper {
+  overflow: hidden;
+
+  .thumbnav {
+    .delete-image-icon-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(25%) translateY(-25%);
+
+      .delete-image-icon {
+        cursor: pointer;
+        background-color: #2f2f2f;
+      }
+    }
+
+    &::after {
+      content: unset;
+    }
+
+    img {
+      border-radius: 4px;
+    }
+  }
+
+  > .uk-active .thumbnav,
+  > .uk-active.thumbnav {
+    img {
+      border: 3px solid #395f8c;
+      border-radius: 4px;
+    }
+  }
+
+  > .thumbnav-uploader {
+    > .js-upload {
+      width: 100%;
+
+      .custom-uploader-container {
+        aspect-ratio: 1;
+        white-space: nowrap;
+        color: #bbb9b9;
+        border: 1px solid #c8c8c8;
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.slidenav-wrapper {
+  .image-container {
+    img {
+      border-radius: 4px;
+    }
+  }
+
+  .slide-item {
+    .delete-image-icon-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(25%) translateY(-25%);
+
+      .delete-image-icon {
+        cursor: pointer;
+        background-color: #2f2f2f;
+      }
+    }
+  }
+
+  .slidenav-uploader {
+    aspect-ratio: 1;
+    margin-bottom: auto;
+
+    > .js-upload {
+      aspect-ratio: 1;
+      width: 100%;
+      height: auto;
+      margin-bottom: auto;
+
+      .custom-uploader {
+        color: #bbb9b9;
+        border: 1px solid #c8c8c8;
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        aspect-ratio: 1;
+        flex: 0;
+        padding: 0;
+        text-transform: capitalize;
+      }
+
+      &:hover {
+        .custom-uploader-container {
+          background-color: transparent !important;
+
+          color: #333 !important;
+          border-color: #b2b2b2 !important;
+
+          svg {
+            path {
+              transition: 0.1s ease-in-out;
+              transition-property: stroke;
+              stroke: #333 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

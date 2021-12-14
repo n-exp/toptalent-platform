@@ -40,6 +40,7 @@ const KPIsForm = () => {
     <div className="kpis-form">
       <div className="uk-margin">
         <ImageGallery images={images} onChange={setImages} />
+        {/* <ImageGallery images={images.slice(0,6)} onChange={setImages} /> */}
       </div>
 
       <div className="uk-margin">

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
+import clsx from 'clsx';
 
 import { useFileUpload } from '../../../../hooks/useFileUpload';
 
-const FileUploader = ({ onChange, multiple, children }) => {
+const FileUploader = ({ onChange, multiple, children, classes }) => {
   const { files, uploadFiles } = useFileUpload();
 
   useEffect(() => {
@@ -12,7 +13,7 @@ const FileUploader = ({ onChange, multiple, children }) => {
   }, [files, onChange]);
 
   return (
-    <div className="js-upload" uk-form-custom="">
+    <div className={clsx('js-upload', { [classes]: classes })} uk-form-custom="">
       <input
         type="file"
         accept="image/*"

@@ -13,6 +13,8 @@ import TextareaField from '../../../../components/common/Inputs/Textarea';
 import ArrowLeftIcon from '../../../../assets/icons/ArrowLeftIcon';
 import { PlusIcon } from '../../../../assets/icons/PlusIcon';
 import TextField from '../../../../components/common/Inputs/TextField';
+import ImageGallery from '../../../../components/common/ImageGallery/ImageGallery';
+import { useProfileData } from '../../state/hooks/useProfileData';
 
 const tags = [
   { title: 'HTML', color: 'default' },
@@ -32,9 +34,14 @@ const KPIsForm = () => {
   const { kpis, selectedKPIs, kpisTags, checkboxes, updateSelectedKPI, toggleCheckbox } =
     useKPIsData();
   const { avatar, setAvatar } = useAuthData();
+  const { images, setImages } = useProfileData();
 
   return (
     <div className="kpis-form">
+      <div className="uk-margin">
+        <ImageGallery images={images} onChange={setImages} />
+      </div>
+
       <div className="uk-margin">
         <div className="uk-grid-small" uk-grid="">
           <div className="uk-width-1-6">
@@ -63,10 +70,7 @@ const KPIsForm = () => {
 
       <div className="uk-margin">
         <Chip isSelected={true} title="Customer Segmentation" />
-        <Chip
-          isSelected={false}
-          title="Data Discovery"
-        />
+        <Chip isSelected={false} title="Data Discovery" />
       </div>
 
       <div className="uk-margin">
@@ -88,9 +92,13 @@ const KPIsForm = () => {
         <Tag key={tagIdx} title={tag.title} color={tag.color} size={tag.size} />
       ))}
 
-      <TextareaField label="Short Description" placeholder="Add short description" onChange={() => {}}/>
-      <TextareaField  placeholder="Add short description"onChange={() => {}}/>
-      <TextareaField label="Short Description" onChange={() => {}}/>
+      <TextareaField
+        label="Short Description"
+        placeholder="Add short description"
+        onChange={() => {}}
+      />
+      <TextareaField placeholder="Add short description" onChange={() => {}} />
+      <TextareaField label="Short Description" onChange={() => {}} />
 
       <TextField icon={ArrowLeftIcon} />
       <TextField icon={PlusIcon} />

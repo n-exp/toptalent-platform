@@ -5,7 +5,7 @@ import { useProjectDetailsData } from './hooks/useProjectDetailsData';
 
 import './ProjectDetails.scss';
 
-const ProjectDetails = () => {
+const ProjectDetailsPage = () => {
   const { projects, toggleProject } = useProjectDetailsData();
 
   return (
@@ -52,4 +52,4 @@ const ProjectDetails = () => {
   );
 };
 
-export default ProjectDetails;
+export default ProjectDetailsPage;

@@ -3,6 +3,7 @@ import KPIsPage from '../pages/KPIs/KPIsPage';
 import SignupPage from '../pages/Signup/SignupPage';
 import LoginPage from '../pages/Login/LoginPage';
 import ProjectDetailsPage from '../pages/ProjectDetails/ProjectDetailsPage';
+import ProfessionalsNeedPage from '../pages/ProfessionalsNeed/ProfessionalsNeedPage';
 
 const authenticatedRoutes = [
   {
@@ -20,6 +21,10 @@ const authenticatedRoutes = [
   {
     path: Route.PROJECT_DETAILS,
     element: <ProjectDetailsPage />
+  },
+  {
+    path: Route.PROFESSIONALS_NEED,
+    element: <ProfessionalsNeedPage />
   },
   {
     path: Route.NOT_FOUND,

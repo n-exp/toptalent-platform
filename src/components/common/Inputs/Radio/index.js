@@ -7,7 +7,7 @@ import './index.scss';
 
 const RadioField = ({ id, label, checked, onChange }) => {
   const handleChange = useCallback(() => {
-    onChange({ id, label, checked });
+    onChange({ id, label, checked: !checked });
   }, [id, label, checked, onChange]);
 
   return (

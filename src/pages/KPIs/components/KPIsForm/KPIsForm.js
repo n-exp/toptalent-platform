@@ -118,7 +118,13 @@ const KPIsForm = () => {
       <div className="uk-child-width-1-1 uk-margin" uk-grid="">
         {checkboxes.map(({ id, label, checked }) => (
           <div key={id}>
-            <CheckboxField id={id} label={label} checked={checked} onChange={toggleCheckbox} />
+            <CheckboxField
+              id={id}
+              label={label}
+              checked={checked}
+              variant="outlined"
+              onChange={toggleCheckbox}
+            />
           </div>
         ))}
       </div>

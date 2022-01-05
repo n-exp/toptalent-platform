@@ -1,5 +1,9 @@
+import clsx from 'clsx';
+
 import './Divider.scss';
 
-const Divider = ({ type = 'default' }) => <hr className={`divider-component divider-${type}`} />;
+const Divider = ({ classes, type = 'default' }) => (
+  <hr className={clsx(`divider-component divider-${type}`, { [classes]: classes })} />
+);
 
 export default Divider;

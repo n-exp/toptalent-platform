@@ -1,10 +1,15 @@
+import clsx from 'clsx';
+
 import Divider from './Divider';
 
 import './index.scss';
 
-const DividerField = ({ text, type }) => {
+const DividerField = ({ text, type, classes }) => {
   return text ? (
-    <div className="divider-wrapper uk-grid-medium uk-padding" uk-grid="">
+    <div
+      className={clsx('divider-wrapper uk-grid-medium uk-padding', { [classes]: classes })}
+      uk-grid=""
+    >
       <div className="uk-width-expand uk-margin-auto-vertical">
         <Divider type={type} />
       </div>
@@ -14,7 +19,7 @@ const DividerField = ({ text, type }) => {
       </div>
     </div>
   ) : (
-    <Divider type={type} />
+    <Divider classes={classes} type={type} />
   );
 };
 export default DividerField;

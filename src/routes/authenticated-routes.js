@@ -2,6 +2,7 @@ import Route from './state/types';
 import KPIsPage from '../pages/KPIs/KPIsPage';
 import SignupPage from '../pages/Signup/SignupPage';
 import LoginPage from '../pages/Login/LoginPage';
+import ProjectDetailsPage from '../pages/ProjectDetails/ProjectDetailsPage';
 
 const authenticatedRoutes = [
   {
@@ -15,6 +16,10 @@ const authenticatedRoutes = [
   {
     path: Route.KPIS,
     element: <KPIsPage />
+  },
+  {
+    path: Route.PROJECT_DETAILS,
+    element: <ProjectDetailsPage />
   },
   {
     path: Route.NOT_FOUND,

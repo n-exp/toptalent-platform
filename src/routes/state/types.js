@@ -4,6 +4,7 @@ const Route = {
   FORGOT: '/forgot',
 
   KPIS: '/kpis',
+  PROJECT_DETAILS: '/project-details',
 
   ROOT: '/',
 

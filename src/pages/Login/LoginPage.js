@@ -4,6 +4,7 @@ import { useLoginData } from './hooks/useLoginData';
 import Authcontainer from '../../components/AuthContainer';
 import FormFooter from './components/Form/FormFooter';
 import Route from '../../routes/state/types';
+import EyeIcon from '../../assets/icons/EyeIcon';
 
 const LoginPage = () => {
   const {
@@ -33,7 +34,8 @@ const LoginPage = () => {
       onToggle: toggleIsPasswordShown,
       type: isPasswordShown ? 'text' : 'password',
       label: 'Password',
-      placeholder: 'Enter Password'
+      placeholder: 'Enter Password',
+      icon: EyeIcon
     }
   ];
 

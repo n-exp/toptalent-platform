@@ -6,6 +6,7 @@ import FormHeader from './components/Form/FormHeader';
 import FormFooter from './components/Form/FormFooter';
 import Authcontainer from '../../components/AuthContainer';
 import LoginLink from './components/Link/LoginLink';
+import EyeIcon from '../../assets/icons/EyeIcon';
 
 const SignupPage = () => {
   const { kpis } = useKPIsData();
@@ -57,7 +58,8 @@ const SignupPage = () => {
       type: isPasswordShown ? 'text' : 'password',
       label: 'Password',
       placeholder: 'Confirm Password',
-      isRequired: true
+      isRequired: true,
+      icon: EyeIcon
     }
   ];
 
@@ -92,7 +94,6 @@ const SignupPage = () => {
             buttons,
             footer: <FormFooter />
           }}
-          //   footer={{ text: "Don't have an account?", link: '/signup', linkText: 'Join free today' }}
           onSubmit={handleSubmit}
         />
       </div>

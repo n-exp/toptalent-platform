@@ -14,7 +14,8 @@ const AuthContainerInput = ({
   onToggle,
   placeholder,
   size,
-  isRequired
+  isRequired,
+  icon
 }) => {
   const InputComponent = useMemo(() => (type === 'select' ? SelectField : TextField), [type]);
 
@@ -26,7 +27,7 @@ const AuthContainerInput = ({
     type,
     placeholder,
     isRequired,
-    ...((type === 'password' || type === 'text') && { isToggled, onToggle, size }),
+    ...((type === 'password' || type === 'text') && { isToggled, onToggle, size, icon }),
     ...(type === 'select' && { options })
   };
 

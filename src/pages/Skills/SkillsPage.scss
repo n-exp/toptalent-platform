@@ -1,0 +1,27 @@
+.skills-page {
+  > .skills-container {
+    > .tags-list {
+      > .title {
+        color: #000;
+        font-weight: 600;
+        font-size: 1.5625rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .title {
+      color: #000;
+      font-weight: bold;
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+
+    .expand-more {
+      cursor: pointer;
+      color: #166fff;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.0625rem;
+    }
+  }
+}

@@ -31,7 +31,7 @@ const ProjectDetailsPage = () => {
         ))}
       </div>
 
-      <Divider classes="uk-margin-xlarge" />
+      <Divider classes="uk-margin-large" />
 
       <div className="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid="">
         <div className="uk-flex uk-flex-center uk-flex-right@s">

@@ -1,10 +1,12 @@
+import { Navigate } from 'react-router-dom';
+
 import Route from './state/types';
 import KPIsPage from '../pages/KPIs/KPIsPage';
 import SignupPage from '../pages/Signup/SignupPage';
 import LoginPage from '../pages/Login/LoginPage';
 import ProjectDetailsPage from '../pages/ProjectDetails/ProjectDetailsPage';
 import ProfessionalsNeedPage from '../pages/ProfessionalsNeed/ProfessionalsNeedPage';
-import { Navigate } from 'react-router-dom';
+import SkillsPage from '../pages/Skills/SkillsPage';
 
 const authenticatedRoutes = [
   {
@@ -26,6 +28,10 @@ const authenticatedRoutes = [
   {
     path: Route.PROFESSIONALS_NEED,
     element: <ProfessionalsNeedPage />
+  },
+  {
+    path: Route.SKILLS,
+    element: <SkillsPage />
   },
   {
     path: Route.ROOT,

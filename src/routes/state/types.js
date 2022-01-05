@@ -6,6 +6,7 @@ const Route = {
   KPIS: '/kpis',
   PROJECT_DETAILS: '/project-details',
   PROFESSIONALS_NEED: '/professionals-need',
+  SKILLS: '/skills',
 
   ROOT: '/',
 

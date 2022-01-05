@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useLoginData } from './hooks/useLoginData';
 import Authcontainer from '../../components/AuthContainer';
@@ -7,6 +8,7 @@ import Route from '../../routes/state/types';
 import EyeIcon from '../../assets/icons/EyeIcon';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const {
     email,
     password,
@@ -51,8 +53,10 @@ const LoginPage = () => {
         isPasswordShown,
         remember
       });
+
+      navigate(Route.PROJECT_DETAILS);
     },
-    [email, password, isPasswordShown, remember]
+    [email, password, isPasswordShown, remember, navigate]
   );
 
   return (

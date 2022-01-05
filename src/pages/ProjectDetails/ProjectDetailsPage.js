@@ -1,3 +1,6 @@
+import { Link, useNavigate } from 'react-router-dom';
+
+import Route from '../../routes/state/types';
 import Button from '../../components/common/Button/Button';
 import Divider from '../../components/common/Divider';
 import CheckboxField from '../../components/common/Inputs/Checkbox';
@@ -6,6 +9,7 @@ import { useProjectDetailsData } from './hooks/useProjectDetailsData';
 import './ProjectDetails.scss';
 
 const ProjectDetailsPage = () => {
+  const navigate = useNavigate();
   const { projects, toggleProject } = useProjectDetailsData();
 
   return (
@@ -35,17 +39,20 @@ const ProjectDetailsPage = () => {
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical uk-text-nowrap"
             variant="outlined"
             color="secondary"
+            onClick={() => navigate(-1)}
           >
             Back
           </Button>
         </div>
         <div className="uk-flex uk-flex-center uk-flex-left@s">
-          <Button
-            classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical uk-text-nowrap"
-            color="secondary"
-          >
-            Next: Professionals Details
-          </Button>
+          <Link to={Route.PROFESSIONALS_NEED} className="uk-width-2-3 uk-width-3-4@s">
+            <Button
+              classes="uk-padding-small uk-padding-remove-vertical uk-text-nowrap"
+              color="secondary"
+            >
+              Next: Professionals Details
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

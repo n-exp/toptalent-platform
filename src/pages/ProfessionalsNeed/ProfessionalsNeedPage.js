@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Button from '../../components/common/Button/Button';
 import Accordion from '../../components/common/controls/Accordion/Accordion';
 import Divider from '../../components/common/Divider';
@@ -7,6 +9,7 @@ import { useProfessionalsNeedData } from './hooks/useProfessionalsNeedData';
 import './ProfessionalsNeed.scss';
 
 const ProfessionalsNeedPage = () => {
+  const navigate = useNavigate();
   const { details, updateDetail } = useProfessionalsNeedData();
 
   return (
@@ -39,6 +42,7 @@ const ProfessionalsNeedPage = () => {
             classes="uk-width-2-3 uk-width-3-4@s uk-padding-small uk-padding-remove-vertical uk-text-nowrap"
             variant="outlined"
             color="secondary"
+            onClick={() => navigate(-1)}
           >
             Back
           </Button>

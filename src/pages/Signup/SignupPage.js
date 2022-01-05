@@ -7,8 +7,11 @@ import FormFooter from './components/Form/FormFooter';
 import Authcontainer from '../../components/AuthContainer';
 import LoginLink from './components/Link/LoginLink';
 import EyeIcon from '../../assets/icons/EyeIcon';
+import { useNavigate } from 'react-router-dom';
+import Route from '../../routes/state/types';
 
 const SignupPage = () => {
+  const navigate = useNavigate();
   const { kpis } = useKPIsData();
   const {
     selectedProfession,
@@ -76,8 +79,10 @@ const SignupPage = () => {
         password,
         isPasswordShown
       });
+
+      navigate(Route.PROJECT_DETAILS);
     },
-    [selectedProfession, name, email, password, isPasswordShown]
+    [selectedProfession, name, email, password, isPasswordShown, navigate]
   );
 
   return (

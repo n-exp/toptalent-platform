@@ -4,6 +4,7 @@ import SignupPage from '../pages/Signup/SignupPage';
 import LoginPage from '../pages/Login/LoginPage';
 import ProjectDetailsPage from '../pages/ProjectDetails/ProjectDetailsPage';
 import ProfessionalsNeedPage from '../pages/ProfessionalsNeed/ProfessionalsNeedPage';
+import { Navigate } from 'react-router-dom';
 
 const authenticatedRoutes = [
   {
@@ -25,6 +26,10 @@ const authenticatedRoutes = [
   {
     path: Route.PROFESSIONALS_NEED,
     element: <ProfessionalsNeedPage />
+  },
+  {
+    path: Route.ROOT,
+    element: <Navigate to={Route.LOGIN} />
   },
   {
     path: Route.NOT_FOUND,
